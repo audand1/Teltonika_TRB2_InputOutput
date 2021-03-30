@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <SignAssembly>false</SignAssembly>
+    <Authors>Audrius Andrijaitis</Authors>
+    <Product>Teltonika TRB2 InputOutput</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright></Copyright>
+    <Description>Component for Teltonika TRB2 gateway I/O easily management.
+This component use TRB2 device API (JsonRPC)</Description>
+    <Version>1.0.0</Version>
+    <AssemblyOriginatorKeyFile>test_key.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <PackageId>Teltonika_TRB2_InputOutput</PackageId>
+    <AssemblyName>Teltonika_TRB2_InputOutput</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Audrius\Documents\Univeras\komponentai\TRB2_InputOutput\TRB2_InputOutput\TRB2_InputOutput.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

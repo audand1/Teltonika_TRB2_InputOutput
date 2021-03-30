@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Teltonika_TRB2_InputOutput</name>
+    </assembly>
+    <members>
+        <member name="M:TRB2_InputOutput.TRB2Device.setupParameters(System.String,System.String,System.String)">
+            <summary>
+            Prepare component and setup TRB2 device login parameters.
+            </summary>
+            <param name="Username">TRB2 device username</param>
+            <param name="Password">TRB2 device password</param>
+            <param name="URL"> TRB2 device IP address or hostname. Don't forget use "http://" in front of URL </param>
+            <returns>
+            <para>0 - OK</para>
+            <para>1 - Username validation fail</para>
+            <para>2 - Password validation fail</para>
+            <para>3 - URL validation fail</para>
+            </returns>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.updateFromDevice">
+            <summary>
+            Sync (Get) I/O data from TRB2 device.
+            </summary>
+            <returns>
+            <para>0 - OK</para>
+            <para>1 - Failed login into device</para>
+            <para>2 - Failed get ADC value from the device</para>
+            <para>3 - Failed get Digital I/O 1 parameters from the device</para>
+            <para>4 - Failed get Digital I/O 2 parameters from the device</para>
+            <para>5 - Failed get Digital I/O 3 parameters from the device</para>
+            </returns>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.updateToDevice">
+            <summary>
+            Sync (Set) I/O data to TRB2 device.
+            </summary>
+            <returns>
+            <para>0 - OK</para>
+            <para>1 - Failed login into device</para>
+            <para>2 - (Empty)</para>
+            <para>3 - Failed set Digital I/O 1 parameters to the device</para>
+            <para>4 - Failed set Digital I/O 2 parameters to the device</para>
+            <para>5 - Failed set Digital I/O 3 parameters to the device</para>
+            </returns>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.getAnalogValue">
+            <summary>
+            Get ADC value in Volts [V] (data of the last synchronization).
+            </summary>
+            <returns>ADC value in Volts [V]</returns>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.getIOValue(System.Int32)">
+            <summary>
+            Get Digital I/O value (data of the last synchronization).
+            </summary>
+            <param name="no">Digital I/O index. Availabe values: 1/2/3</param>
+            <returns><para>Digital I/O value</para> 
+            <para>True - logical 1</para>
+            <para>False - logical 0</para></returns>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when Digital I/O index  isn't 1,2 or 3</exception>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.setIOValue(System.Int32,System.Boolean)">
+            <summary>
+            Set Digital I/O value.
+            </summary>
+            <remarks>Don't forget to sync with your device after all setting.</remarks>
+            <param name="no">Digital I/O index. Availabe values: 1/2/3</param>
+            <param name="value">Digital I/O value
+            <para>true - logical 1</para>
+            <para>false - logical 0</para></param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when Digital I/O index  isn't 1,2 or 3</exception>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.getIODirection(System.Int32)">
+            <summary>
+            Get Digital I/O direction (data of the last synchronization).
+            </summary>
+            <param name="no">Digital I/O index. Availabe values: 1/2/3</param>
+            <returns>Digital I/O direction
+            <para>True - Input</para>
+            <para>False - Output</para></returns>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when Digital I/O index  isn't 1,2 or 3</exception>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.setIODirection(System.Int32,System.Boolean)">
+            <summary>
+            Set Digital I/O direction.
+            </summary>
+            <remarks>Don't forget to sync with your device after all setting.</remarks>
+            <param name="no">Digital I/O index. Availabe values: 1/2/3</param>
+            <param name="value">Digital I/O direction
+            <para>True - Input</para>
+            <para>False - Output</para></param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when Digital I/O index  isn't 1,2 or 3</exception>
+        </member>
+        <member name="M:TRB2_InputOutput.TRB2Device.setIOSaveConfig(System.Int32,System.Boolean)">
+            <summary>
+            Set 'save configuration' option. It should be marked as 'true' when need to save direction and state to the device memory.
+            This is relevant after device reboot.
+            Don't forget to sync with your device after all setting.
+            </summary>
+            <remarks>Don't forget to sync with your device after all setting.</remarks>
+            <param name="no">Digital I/O index. Availabe values: 1/2/3</param>
+            <param name="value">Digital I/O direction
+            <para>True - Save configuration to memory</para>
+            <para>False - Don't save configuration to memory</para></param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when Digital I/O index  isn't 1,2 or 3</exception>
+        </member>
+    </members>
+</doc>
