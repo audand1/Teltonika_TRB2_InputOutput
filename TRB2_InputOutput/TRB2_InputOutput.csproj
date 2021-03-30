@@ -7,7 +7,7 @@
     <Product>Teltonika TRB2 InputOutput</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright></Copyright>
+    <Copyright>Audrius Andrijaitis</Copyright>
     <Description>Component for Teltonika TRB2 gateway I/O easily management.
 This component use TRB2 device API (JsonRPC)</Description>
     <Version>1.0.0</Version>
@@ -16,6 +16,10 @@ This component use TRB2 device API (JsonRPC)</Description>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageId>Teltonika_TRB2_InputOutput</PackageId>
     <AssemblyName>Teltonika_TRB2_InputOutput</AssemblyName>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/audand1/Teltonika_TRB2_InputOutput</RepositoryUrl>
+    <PackageIcon>Trb245_hd_1.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/audand1/Teltonika_TRB2_InputOutput</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -27,7 +31,11 @@ This component use TRB2 device API (JsonRPC)</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="license.txt">
+    <None Include="..\Trb245_hd_1.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\license.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

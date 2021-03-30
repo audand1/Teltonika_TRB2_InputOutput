@@ -4,6 +4,7 @@ This package is for Teltonika TRB2 gateways Input and Output management. With th
 
 # Get started
 Just install this component from NuGet package manager into your .Net project and that's all. :)
+[NuGet link](https://www.nuget.org/packages/Teltonika_TRB2_InputOutput/1.0.0)
 
 # Package documentation
 
